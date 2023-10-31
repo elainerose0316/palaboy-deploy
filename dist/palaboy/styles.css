@@ -1,6 +1,22 @@
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[2]!./src/styles.css?ngGlobalStyle ***!
   \**********************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Source+Sans+3&display=swap);
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[2]!./src/styles.css?ngGlobalStyle (1) ***!
+  \**************************************************************************************************************************************************************************************************************************/
+.nonito{
+        font-family: 'Nunito', sans-serif;
+}
+
+.source-sans b{
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.source-sans p{
+    font-family: 'Source Sans 3', sans-serif;
+}
+
 html:not(.exclude-bg),
 body:not(.exclude-bg) {
     font-family: "Source Sans Pro";
