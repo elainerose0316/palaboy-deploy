@@ -93,8 +93,9 @@ app.put("/admin-rescue/:id", async (req, res) =>{
                                 req.body,
                                 { new: true }
                         );
+                        
+                        res.send(upstream_data);
                 }
-                res.send(upstream_data);
         } catch (err){
                 res.status(500).send(err.message);
         }
