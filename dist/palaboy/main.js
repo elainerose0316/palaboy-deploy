@@ -1472,19 +1472,32 @@ class AdminAfterCareComponent {
       this.toastr.warning('No file selected');
       return;
     }
-    const formData = new FormData();
-    formData.append('image', this.selectedFile1);
-    this.AdminAfterCareService.uploadImage1(formData, this.fileInput1);
-    // this.http.post('http://localhost:80/upload', formData, { responseType: 'text' as 'json' }).subscribe(
-    //   (response) =>{
-    //     console.log('File uploaded successfuly');
-    //     this.fileInput.nativeElement.value = '';
-    //   },(error)=>{
-    //     console.error('Error uploading file:', error);
-    //   }
-    // )
+    const maxSize = 1024 * 1024; // 1mb
+    if (this.selectedFile1.size > maxSize) {
+      this.toastr.warning('File size should not exceed 1mb');
+      return;
+    }
+    // Limit the resolution
+    const reader = new FileReader();
+    reader.onload = e => {
+      const image = new Image();
+      image.onload = () => {
+        const MAX_WIDTH = 675;
+        const MAX_HEIGHT = 1033;
+        let width = image.width;
+        let height = image.height;
+        if (width > MAX_WIDTH || height > MAX_HEIGHT) {
+          this.toastr.warning('Image dimension should not exceed ' + MAX_WIDTH + 'x' + MAX_HEIGHT);
+          return;
+        }
+        const formData = new FormData();
+        formData.append('image', this.selectedFile1);
+        this.AdminAfterCareService.uploadImage1(formData, this.fileInput1);
+      };
+      image.src = e.target.result;
+    };
+    reader.readAsDataURL(this.selectedFile1);
   }
-
   fileSelected2(event) {
     this.selectedFile2 = event.target.files[0];
   }
@@ -1493,19 +1506,32 @@ class AdminAfterCareComponent {
       this.toastr.warning('No file selected');
       return;
     }
-    const formData = new FormData();
-    formData.append('image', this.selectedFile2);
-    this.AdminAfterCareService.uploadImage2(formData, this.fileInput2);
-    // this.http.post('http://localhost:80/upload', formData, { responseType: 'text' as 'json' }).subscribe(
-    //   (response) =>{
-    //     console.log('File uploaded successfuly');
-    //     this.fileInput.nativeElement.value = '';
-    //   },(error)=>{
-    //     console.error('Error uploading file:', error);
-    //   }
-    // )
+    const maxSize = 1024 * 1024; // 1mb 
+    if (this.selectedFile2.size > maxSize) {
+      this.toastr.warning('File size should not exceed 1mb');
+      return;
+    }
+    // Limit the resolution
+    const reader = new FileReader();
+    reader.onload = e => {
+      const image = new Image();
+      image.onload = () => {
+        const MAX_WIDTH = 1728;
+        const MAX_HEIGHT = 2665;
+        let width = image.width;
+        let height = image.height;
+        if (width > MAX_WIDTH || height > MAX_HEIGHT) {
+          this.toastr.warning('Image dimension should not exceed ' + MAX_WIDTH + 'x' + MAX_HEIGHT);
+          return;
+        }
+        const formData = new FormData();
+        formData.append('image', this.selectedFile2);
+        this.AdminAfterCareService.uploadImage2(formData, this.fileInput2);
+      };
+      image.src = e.target.result;
+    };
+    reader.readAsDataURL(this.selectedFile2);
   }
-
   getSanitizedTitle(index) {
     const content = this.title[index];
     return this.sanitizer.bypassSecurityTrustHtml(content);
@@ -1853,7 +1879,7 @@ class AdminAfterCareService {
       fileInput.nativeElement.value = '';
     }, error => {
       // Toastr here
-      this.toastr.error('An error occurred');
+      this.toastr.error('An error occurred' + error.error);
     });
   }
   uploadImage2(image, fileInput) {

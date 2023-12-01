@@ -200,7 +200,7 @@ const storage1 = multer.diskStorage({
 })
 const upload1 = multer({
         storage: storage1,
-        limits: { fileSize: 1000000}, // 1 MB
+        limits: 1024 * 1024 , // 1 MB
 });
 
 app.post('/upload1', upload1.single('image'),(req, res) =>{
@@ -220,6 +220,7 @@ app.post('/upload1', upload1.single('image'),(req, res) =>{
 
                 return res.status(200).send('File uploaded successfully.');
         }).catch((err) =>{
+                console.error(err);
                 return res.status(500);
         });
 })
