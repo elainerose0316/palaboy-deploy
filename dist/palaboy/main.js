@@ -4507,7 +4507,7 @@ _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
   selectors: [["app-home"]],
   decls: 23,
   vars: 0,
-  consts: [[1, "container", "mt"], [1, "row", "align-items-center"], [1, "col"], [1, "nonito"], [1, ""], [1, "col", "test"], ["width", "560", "height", "315", "src", "https://www.youtube.com/embed/uacqyKAOU-Q?si=t9XKyuzjQXU7eh2I", "title", "YouTube video player", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""]],
+  consts: [[1, "container", "mt"], [1, "row", "align-items-center"], [1, "col"], [1, "nonito"], [1, ""], [1, "col", "test"], ["width", "560", "height", "315", "src", "https://www.youtube.com/embed/uacqyKAOU-Q?si=qUASpIWRu03pvMDM", "title", "YouTube video player", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""]],
   template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3)(4, "b");
