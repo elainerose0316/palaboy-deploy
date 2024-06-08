@@ -4507,7 +4507,7 @@ _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
   selectors: [["app-home"]],
   decls: 23,
   vars: 0,
-  consts: [[1, "container", "mt"], [1, "row", "align-items-center"], [1, "col"], [1, "nonito"], [1, ""], [1, "col", "test"], ["src", "assets/final_video.mp4", "type", "video/mp4"]],
+  consts: [[1, "container", "mt"], [1, "row", "align-items-center"], [1, "col"], [1, "nonito"], [1, ""], [1, "col", "test"], ["src", "assets\\final_video.mp4", "type", "video/mp4"]],
   template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3)(4, "b");
