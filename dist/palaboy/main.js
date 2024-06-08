@@ -4505,9 +4505,9 @@ _class.ɵfac = function HomeComponent_Factory(t) {
 _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
   type: _class,
   selectors: [["app-home"]],
-  decls: 23,
+  decls: 24,
   vars: 0,
-  consts: [[1, "container", "mt"], [1, "row", "align-items-center"], [1, "col"], [1, "nonito"], [1, ""], [1, "col", "test"], ["width", "560", "height", "315", "src", "https://www.youtube.com/embed/uacqyKAOU-Q?si=qUASpIWRu03pvMDM", "title", "YouTube video player", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""]],
+  consts: [[1, "container", "mt"], [1, "row", "align-items-center"], [1, "col"], [1, "nonito"], [1, ""], [1, "col", "test"], ["width", "800", "height", "600", "src", "https://www.youtube.com/embed/uacqyKAOU-Q?si=qUASpIWRu03pvMDM", "title", "YouTube video player", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""]],
   template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3)(4, "b");
@@ -4521,8 +4521,9 @@ _class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 5);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](12, "iframe", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, " Your browser does not support the video tag. ");
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "br")(14, "br")(15, "br")(16, "br")(17, "br")(18, "br")(19, "br")(20, "br")(21, "br")(22, "app-footer");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](14, "br")(15, "br")(16, "br")(17, "br")(18, "br")(19, "br")(20, "br")(21, "br")(22, "br")(23, "app-footer");
     }
   },
   dependencies: [_footer_footer_component__WEBPACK_IMPORTED_MODULE_0__.FooterComponent],
